@@ -2,26 +2,20 @@ body {
   min-height: 100vh;
   font-family: "inter", sans-serif;
   color: #111;
-  position: relative;
   background-image: linear-gradient(45deg, #fff, #6dd5fa, #4ba0d9);
 }
 
 .background-layer {
-  position: absolute;
   width: 100%;
   height: 100%;
-  z-index: -1;
-}
-
-.app-container {
-  padding: 50px 10px 0;
+  position: absolute;
 }
 
 h1 {
   font-family: "roboto", sans-serif;
   text-align: center;
   font-size: 72px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   color: #f1f1f1;
   text-shadow: 1px 1px #333;
   text-shadow: 2px 2px #3a3a3a;
@@ -30,41 +24,36 @@ h1 {
 }
 
 .information-block {
-  max-width: 500px;
-  position: relative;
+  max-width: 510px;
   margin: 0 auto;
   background-color: #f1f1f1;
   border-radius: 10px;
-  padding: 25px 25px 40px;
+  padding: 35px;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
 }
 
-.loader {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  background-color: inherit;
-  z-index: 1;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.6s ease-out, visibility 0.6s ease-out;
-}
-.loader .active {
-  opacity: 1;
-  visibility: visible;
-}
-.loader-logo {
-  width: 5rem;
-  animation: loader 1.8s ease-out infinite;
+table {
+  margin-bottom: 30px;
+  width: 100%;
+  height: 100%;
 }
 
-@keyframes loader {
-  50% {
-    transform: rotate(360deg);
-  }
+table,
+th,
+td {
+  border: 1px solid #34343488;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 8px;
+  font-size: 20px;
+  font-weight: 500;
+}
+td {
+  color: #343434;
 }
 
 /*style barre de recherche*/
@@ -95,41 +84,19 @@ h1 {
   font-size: 18px;
   cursor: pointer;
 }
-
-.emoji-logo {
-  display: block;
-  max-width: 75px;
-  margin: 0 auto 10px;
-  filter: drop-shadow(2px 2px 1px #515151);
-}
-
 .user-input {
   text-align: center;
   font-weight: 700;
   font-size: 25px;
   margin: 0px;
 }
-table {
-  margin-bottom: 30px;
-  width: 100%;
-  height: 100%;
-}
-table,
-th,
-td {
-  border: 1px solid #34343488;
-  border-collapse: collapse;
-  text-align: left;
-}
 
-th,
-td {
-  padding: 8px;
-  font-size: 20px;
-  font-weight: 500;
-}
-td {
-  color: #343434;
+/*style qualité air*/
+.emoji-logo {
+  display: block;
+  max-width: 75px;
+  margin: 0 auto 10px;
+  filter: drop-shadow(2px 2px 1px #515151);
 }
 
 .scale-bar-text {
