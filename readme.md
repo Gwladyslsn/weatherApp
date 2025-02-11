@@ -11,3 +11,6 @@ ajouter en dessous une section meteo : utilisation d'une 2ème API ?
 
 - afficher la temperatures
 - afficher la météo (soleil, nuage, pluie etc)
+
+-- A FAIRE --
+récupérer les data de latitude /longitude pour recuperer les infos des villes en fonction de la recherche pour que le fetch de l'API soit fonctionnel
