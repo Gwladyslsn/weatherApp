@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Qualité de l'air</title>
+  </head>
+  <body>
+    <div class="background-layer">
+      <!--barre de recherche-->
+      <section class="search-container">
+        <div class="information-block">
+          <div class="search-bar">
+            <input
+              type="text"
+              class="city-input"
+              placeholder="Rechercher une ville"
+            />
+            <button id="search-button">Rechercher</button>
+          </div>
+          <p class="user-information">city information</p>
+        </div>
+      </section>
+
+      <!--Partie qualité air-->
+      <section class="quality-container">
+        <h1>Qualité de l'air</h1>
+        <div class="information-block">
+          <div class="loader active">
+            <img
+              src="./ressources/feeling/biodegradable.svg"
+              alt="loader icon"
+              class="loader-logo"
+            />
+          </div>
+          <img
+            src="./ressources/feeling/magnifying-glass.svg"
+            alt="feeling icon"
+            class="emoji-logo"
+          />
+          <table>
+            <tr>
+              <th class="label">Info de pollution</th>
+              <td class="pollution-info">...</td>
+            </tr>
+            <tr>
+              <th class="label">Indice de pollution</th>
+              <td class="pollution-value">...</td>
+            </tr>
+          </table>
+
+          <p class="scale-bar-text">Echelle de pollution</p>
+          <div class="scale-container">
+            <img
+              src="ressources/feeling/location.svg"
+              alt="localisation"
+              class="location-pointer"
+            />
+            <div class="scale-section"></div>
+            <div class="scale-section"></div>
+            <div class="scale-section"></div>
+            <div class="scale-section"></div>
+            <div class="scale-section"></div>
+            <div class="scale-section"></div>
+          </div>
+        </div>
+      </section>
+
+      <!--Partie meteo-->
+      <section class="meteo-container">
+        <h1>Météo du jour</h1>
+        <div class="information-block">
+          <img
+            src="./ressources/feeling/magnifying-glass.svg"
+            alt="logo meteo"
+            class="weather-logo"
+          />
+          <table>
+            <tr>
+              <th class="label">temperature</th>
+              <td class="temperature-info">...</td>
+            </tr>
+            <tr>
+              <th class="label">indice UV</th>
+              <td class="uv-info">...</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
