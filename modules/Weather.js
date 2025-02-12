@@ -3,7 +3,14 @@ import { Search } from "./Search.js";
 
 class Weather {
   constructor() {
-    //
+    this.logoWeather = document.querySelector(".weather-logo");
+    this.logoWeather = [
+      { img: "sun", text: "soleil", img.src="../ressources/weather/sun.png"},
+      { img: "cloud", text: "nuage", img.src="../ressources/weather/cloudy.png" },
+      { img: "rain", text: "pluie" },
+      { img: "snow", text: "neige" },
+      { img: "moon", text: "lune" },
+    ]
 
     this.init();
   }
@@ -14,7 +21,7 @@ class Weather {
   }
 
   showIcon() {
-    // Remplacer icon par les icones meteo
+    this.logoWeather.textContent = "test";
   }
 
   showInfo() {
