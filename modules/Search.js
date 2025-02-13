@@ -32,7 +32,6 @@ class Search {
       const lat = this.cityData.lat;
       const long = this.cityData.lng;
       new ApiWeather(lat, long);
-      console.log(this.cityData);
     } else {
       alert("La ville renseignée n'existe pas");
     }
