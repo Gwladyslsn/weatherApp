@@ -19,9 +19,6 @@ class Search {
         this.getLatLong();
         document.querySelector(".user-input").textContent = this.cityData.city;
       });
-    } else {
-      console.log("pas de ville");
-      alert("Veuillez renseigner une ville");
     }
   }
 

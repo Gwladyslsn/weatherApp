@@ -6,12 +6,12 @@ class Weather {
       {
         scale: [-20, -10],
         quality: "snowman",
-        src: "snowman",
+        src: "./ressources/feelingWeather/snowman.svg",
       },
       {
-        scale: [-9, 0],
+        scale: [-9, 1],
         quality: "cold",
-        src: "cold",
+        src: "./ressources/feelingWeather/cold.svg",
       },
       {
         scale: [1, 10],
@@ -26,40 +26,35 @@ class Weather {
       {
         scale: [21, 25],
         quality: "pleasant",
-        src: "pleasant",
+        src: "./ressources/feelingWeather/pleasant.svg",
       },
       {
         scale: [26, 34],
         quality: "hot",
-        src: "hot",
+        src: "./ressources/feelingWeather/hot.svg",
       },
       {
         scale: [35, 40],
         quality: "canicule",
-        src: "canicule",
+        src: "./ressources/feelingWeather/canicule.svg",
       },
     ];
 
     this.temperature = document.querySelector(".temperature-info");
+    this.climaticIcon = document.querySelector(".weather-logo");
 
     this.init();
   }
 
   init() {
-    this.showIcon();
     this.showInfo();
     this.showFeeling();
-  }
-
-  showIcon() {
-    //
+    this.climaticCondition();
   }
 
   showInfo() {
     // Remplacer les ... par les données récupérées
     this.temperature.textContent = `${window.app.temperatureValue} °C`;
-
-    //remplacer les ... par les icones feeling
   }
 
   showFeeling() {
@@ -78,6 +73,26 @@ class Weather {
         alert("veuillez faire une nouvelle recherche");
       }
     }
+  }
+
+  climaticCondition() {
+    //afficher l'emoticone correspondant à la méteo
+    if (!window.app.temperatureValue) {
+      this.climaticIcon.src = "./ressources/feelingAQI/magnifying-glass.svg";
+    } else if (window.app.is_day === 0) {
+      this.climaticIcon.src = "../ressources/weather/moon.png";
+    } else if (window.app.rain === 1) {
+      this.climaticIcon.src = "../ressources/weather/rain.png";
+    } else if (window.app.snow === 1) {
+      this.climaticIcon.src = "../ressources/weather/snow.png";
+    } else if (window.app.windSpeed >= 15) {
+      this.climaticIcon.src = "../ressources/weather/wind.png";
+    } else if (window.app.cloud >= 100) {
+      this.climaticIcon.src = "../ressources/weather/cloudy.png";
+    } else {
+      this.climaticIcon.src = "../ressources/weather/sun.png";
+    }
+    this.climaticIcon.textContent = this.climaticIcon.src;
   }
 }
 

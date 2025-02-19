@@ -36,7 +36,6 @@ class ApiWeather {
     fetch(this.url)
       .then((response) => response.json())
       .then((data) => {
-        //console.log("data", data);
         window.app.temperatureValue = data.current.temperature_2m;
         window.app.isDay = data.current.is_day;
         window.app.rain = data.current.rain;
@@ -44,7 +43,11 @@ class ApiWeather {
         window.app.cloud = data.current.cloud_cover;
         window.app.windSpeed = data.current.wind_speed_10m;
         new Weather();
-      });
+        console.log(data);
+      })
+      .catch((error) =>
+        alert("Nous n'avons pas les données pour la ville renseignée")
+      );
   }
 }
 
