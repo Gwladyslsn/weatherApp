@@ -78,7 +78,7 @@ class Weather {
   climaticCondition() {
     //afficher l'emoticone correspondant à la méteo
     if (!window.app.temperatureValue) {
-      this.climaticIcon.src = "./ressources/feelingAQI/magnifying-glass.svg";
+      this.climaticIcon.src = "./ressources/weather/magnifying-glass.png";
     } else if (window.app.is_day === 0) {
       this.climaticIcon.src = "../ressources/weather/moon.png";
     } else if (window.app.rain === 1) {

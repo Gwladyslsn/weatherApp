@@ -43,7 +43,6 @@ class ApiWeather {
         window.app.cloud = data.current.cloud_cover;
         window.app.windSpeed = data.current.wind_speed_10m;
         new Weather();
-        console.log(data);
       })
       .catch((error) =>
         alert("Nous n'avons pas les données pour la ville renseignée")
